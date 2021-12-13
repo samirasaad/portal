@@ -1,1 +1,21 @@
 /* ============= General styles ============= */
+* {
+  font-family: "PoppinsRegular";
+  font-size: 14px;
+}
+
+.medium-font {
+  font-family: "PoppinsMedium";
+}
+
+.bold-font {
+  font-family: "PoppinsBold";
+}
+
+.semibold-font {
+  font-family: "PoppinsSemiBold";
+}
+
+button:focus {
+  outline: none;
+}
