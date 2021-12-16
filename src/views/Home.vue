@@ -1,5 +1,6 @@
 <template>
   <section class="bg">
+    <ConfirmationAlert></ConfirmationAlert>
     <nav class="container d-flex justify-content-between align-items-center">
       <img src="./../assets/images/logo.png" class="logo mx-4 mx-md-0" />
       <button class="sign-out-btn mx-md-2 mx-4 px-3">
@@ -44,8 +45,10 @@
 import HorizontalStepper from "./../components/HorizontalStepper/HorizontalStepper.vue";
 import BasicInfo from "./../components/BasicInfo/BasicInfo";
 import ImportCv from "./../components/ImportCv/ImportCv.vue";
+import ConfirmationAlert from "./../components/ConfirmationAlert/ConfirmationAlert.vue";
+
 export default {
-  components: { HorizontalStepper, BasicInfo, ImportCv },
+  components: { HorizontalStepper, BasicInfo, ImportCv, ConfirmationAlert },
   data() {
     return {
       stepperOptions: {
