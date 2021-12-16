@@ -16,6 +16,42 @@
   font-family: "PoppinsSemiBold";
 }
 
-button:focus {
+button:focus,
+input:focus {
   outline: none;
+}
+input {
+  border: 1px solid #d9d9d9;
+  padding: 0.9rem;
+  border-radius: 12px;
+}
+.question {
+  color: #3a3a3a;
+  font-family: "PoppinsSemiBold";
+}
+.logo {
+  height: 54px;
+}
+.bg {
+  background-image: url("~@/assets//images/bg.png");
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.sign-out-btn {
+  color: white;
+  border: 1px solid #aba2c9;
+  border-radius: 10px;
+  background-color: transparent;
+  height: 3.4rem;
+  img {
+    height: 17px;
+  }
+}
+/* ************************************ media queries ****************************** */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1120px;
+  }
 }
