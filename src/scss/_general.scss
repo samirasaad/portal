@@ -40,23 +40,28 @@ input {
   background-attachment: fixed;
 }
 
-.confirm-btn,
-.dimmed-btn {
+.primary-btn,
+.dimmed-btn,
+.secondary-btn {
   border-radius: 8px;
   font-family: "PoppinsSemiBold";
   border: 0;
+  padding: 11px 20px;
 }
-.confirm-btn {
+.primary-btn {
+  color: white;
+  background-color: #422e87;
+}
+.secondary-btn {
   color: #422e87;
   border: 1px solid #422e87;
   background-color: transparent;
-  padding: 0px 1.1rem;
 }
 .dimmed-btn {
   background-color: #dbdbdb;
   color: #8b8b8b;
   border: 1px solid #dbdbdb;
-  padding: 0.7rem 1.4rem;
+  pointer-events: none;
 }
 .sign-out-btn {
   color: white;
@@ -69,7 +74,34 @@ input {
   }
 }
 button {
-  font-size: 0.9rem;
+  font-size: 0.86rem;
+}
+/******************************************  toaster ***************************************/
+.dtoast-ctn {
+  width: 32rem !important;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  display: inline-block;
+  transform: translate(-50%, 9%);
+  .dtoast-dub {
+    width: 100% !important;
+    min-height: 50px !important;
+    border-radius: 12px !important;
+    .dt-body {
+      .dt-body-content {
+        margin-top: 0px !important;
+      }
+    }
+    .dt-struct {
+      justify-content: center;
+      .dt-action {
+        padding-top: 2px !important;
+        margin-top: 8px !important;
+        margin-right: 10px;
+      }
+    }
+  }
 }
 /* ************************************ media queries ****************************** */
 @media (min-width: 1400px) {

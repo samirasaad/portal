@@ -48,7 +48,12 @@ import ImportCv from "./../components/ImportCv/ImportCv.vue";
 import ConfirmationAlert from "./../components/ConfirmationAlert/ConfirmationAlert.vue";
 
 export default {
-  components: { HorizontalStepper, BasicInfo, ImportCv, ConfirmationAlert },
+  components: {
+    HorizontalStepper,
+    BasicInfo,
+    ImportCv,
+    ConfirmationAlert,
+  },
   data() {
     return {
       stepperOptions: {
