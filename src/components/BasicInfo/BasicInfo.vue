@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import VerticallStepper from "./../VerticallStepper.vue";
-import TestComponent from "./../TestComponent.vue";
+import VerticallStepper from "../VerticallStepper/VerticallStepper.vue";
 
 export default {
   components: { VerticallStepper },
@@ -16,24 +15,22 @@ export default {
         headers: [
           {
             title: "What is your Current Role?",
-            content: TestComponent,
           },
-          { title: "What are Your skills ?", content: TestComponent },
+          {
+            title: "What are Your skills ?",
+          },
           {
             title: "How many years of experience do you have answer?",
-            content: TestComponent,
           },
           {
             title: "What project types did you work on?",
-            content: TestComponent,
           },
-          { title: "What is your Expected Salary?", content: TestComponent },
+          { title: "What is your Expected Salary?" },
           {
             title: "Are you available for Part-time job?",
-            content: TestComponent,
           },
-          { title: "What is your First Language?", content: TestComponent },
-          { title: "What is your Second Language?", content: TestComponent },
+          { title: "What is your First Language?" },
+          { title: "What is your Second Language?" },
         ],
         prevText: "Back",
         nextText: "Next",

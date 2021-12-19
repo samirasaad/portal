@@ -1,31 +1,20 @@
 <template>
-  <section class="">
-    <VerticallStepper :options="stepperOptions">
-      <div slot="step-1">
-        <input />
-      </div>
-    </VerticallStepper>
+  <section class="import-cv-wrapper">
+    <h3 class="heading semiBold-font font-weight-bold">
+      Upload your resume to import your cv
+    </h3>
+    <p class="hint">
+      Quickly build your profile by uploading your C.V or Importing data from
+      your LinkedIn profile.
+    </p>
   </section>
 </template>
 
 <script>
-import VerticallStepper from "./../VerticallStepper.vue";
-import TestComponent from "./../TestComponent.vue";
-
 export default {
-  components: { VerticallStepper },
+  components: {},
   data() {
-    return {
-      stepperOptions: {
-        headers: [
-          { title: "Basic info", content: TestComponent },
-          { title: "Certificates", content: TestComponent },
-          { title: "Accounts", content: TestComponent },
-        ],
-        prevText: "Back",
-        nextText: "Next",
-      },
-    };
+    return {};
   },
   methods: {},
 };

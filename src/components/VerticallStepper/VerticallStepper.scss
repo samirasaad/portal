@@ -1,87 +1,3 @@
-<template>
-  <div class="vertical-stepper">
-    <div class="w-100 steps-wrapper">
-      <!-- headers-->
-      <div class="headers px-0  justify-content-md-center">
-        <div
-          :key="item.id"
-          v-for="(item, index) in options.headers"
-          class="d-flex align-items-end"
-          :class="{
-            'step-header': true,
-            active: index <= currentPosition,
-            end: index === options.headers.length,
-          }"
-        >
-          <!-- time line-->
-          <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
-          >
-            <div class="time-line-divider"></div>
-            <div
-              class="d-flex justify-content-center align-items-center "
-              :class="{
-                'time-line-active-circle': index === currentPosition,
-                'time-line-dimmed-circle': index != currentPosition,
-              }"
-            >
-              <span class="semibold-font">
-                {{ index + 1 }}
-              </span>
-            </div>
-            <div class="time-line-divider"></div>
-            <div class="time-line-small-divider"></div>
-          </div>
-          <div class="step-header-content mx-4 w-100" @click="slideTo(index)">
-            <div class="mb-2 mt-4 mt-md-0">
-              <label class="question">{{ item.title }}</label>
-            </div>
-            <component :is="item.content"></component>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  name: "Stepper",
-  props: ["options"],
-  data() {
-    return {
-      currentPosition: 0,
-      transitionType: "slide",
-    };
-  },
-  methods: {
-    next() {
-      if (this.currentPosition < this.options.headers.length - 1) {
-        this.transitionType = "stepper-slide-1";
-        this.currentPosition++;
-      }
-    },
-    prev() {
-      if (this.currentPosition > 0) {
-        this.transitionType = "stepper-slide-2";
-        this.currentPosition--;
-      }
-    },
-    slideTo(index) {
-      if (this.currentPosition === index) return;
-      if (this.currentPosition > index) {
-        this.transitionType = "stepper-slide-2";
-      } else {
-        this.transitionType = "stepper-slide-1";
-      }
-      console.log(this.currentPosition);
-
-      this.currentPosition = index;
-    },
-  },
-};
-</script>
-<style scoped lang="scss">
 .vertical-stepper {
   display: flex;
   flex-direction: column;
@@ -92,7 +8,30 @@ export default {
   .headers {
     overflow-x: auto;
   }
-
+  .expected-salary div {
+    right: 8px;
+    top: 0.67rem;
+    height: 31px;
+    border-left: 1px solid lightgrey;
+    input {
+      padding-right: 4rem;
+    }
+  }
+  .available-for-part-time {
+    .yes-option {
+      background-color: #f6f6f6;
+      border: 1px solid #422e87;
+      color: #422e87;
+      width: 14rem;
+      border-radius: 12px;
+    }
+    .no-option {
+      color: #d9d9d9;
+      border: 1px solid #d9d9d9;
+      width: 14rem;
+      border-radius: 12px;
+    }
+  }
   .time-line-active-circle,
   .time-line-dimmed-circle {
     height: 3.1rem;
@@ -127,8 +66,7 @@ export default {
     height: 1.3rem;
     width: 1.3rem;
   }
-  .header-indicator {
-  }
+
   .step-header.start > .header-indicator {
     align-self: flex-end;
   }
@@ -246,4 +184,14 @@ export default {
     }
   }
 }
-</style>
+/******************************************** media queries ******************************/
+@media screen and (max-width: 768px) {
+  .available-for-part-time {
+    .yes-option {
+      width: 11rem !important;
+    }
+    .no-option {
+      width: 11rem !important;
+    }
+  }
+}

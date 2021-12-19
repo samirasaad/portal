@@ -1,3 +1,9 @@
 <template>
-  <input type="text" placeholder="Name" v-model="value" :class="childclass" />
+  <input
+    type="text"
+    :placeholder="Name"
+    v-model="value"
+    class="w-100"
+    :class="childclass"
+  />
 </template>
