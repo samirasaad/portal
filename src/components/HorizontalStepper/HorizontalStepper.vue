@@ -59,7 +59,7 @@
       </transition-group>
       <!-- stepper actions-->
       <div
-        class="foot mt-5 my-4 flex-md-row flex-column"
+        class="foot mt-5 my-4 flex-md-row "
         :class="{
           'justify-content-end': currentPosition == 0,
           'justify-content-between': currentPosition != 0,
@@ -67,7 +67,7 @@
       >
         <button
           v-if="currentPosition > 0"
-          class="prev-button semibold-font mb-md-0 mb-4"
+          class="prev-button semibold-font "
           type="button"
           @click="prev()"
         >
