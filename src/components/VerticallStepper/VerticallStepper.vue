@@ -204,6 +204,8 @@
             class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
           >
             <div class="time-line-divider"></div>
+            <div class="time-line-small-divider d-md-none d-block"></div>
+
             <div
               class="d-flex justify-content-center align-items-center "
               :class="{
@@ -245,6 +247,7 @@
             class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
           >
             <div class="time-line-divider"></div>
+
             <div
               class="d-flex justify-content-center align-items-center "
               :class="{
