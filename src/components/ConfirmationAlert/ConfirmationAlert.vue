@@ -13,7 +13,9 @@
         class="d-flex justify-content-lg-end justify-content-center my-lg-0 my-3"
       >
         <button class="dimmed-btn mx-2" @click="displayToaster">Resend</button>
-        <button class="secondary-btn mx-2">Edit Email</button>
+        <button class="secondary-btn mx-2" @click="showModal">
+          Edit Email
+        </button>
       </div>
     </div>
   </section>
@@ -38,7 +40,6 @@ Vue.use(DToaster, {
 
 export default {
   components: {},
-
   data() {
     return {};
   },
@@ -48,6 +49,9 @@ export default {
         heading: ``,
         content: `A new verification link just sent to your email account`,
       });
+    },
+    showModal() {
+      this.$modal.show("edit-email");
     },
   },
 };

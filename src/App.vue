@@ -1,5 +1,6 @@
 <template>
   <router-view>
+    <!-- toaster -->
     <notifications></notifications>
   </router-view>
 </template>

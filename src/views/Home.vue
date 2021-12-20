@@ -38,14 +38,39 @@
         </div>
       </HorizontalStepper>
     </div>
+
+    <!-- modal -->
+    <modal name="edit-email">
+      <div class="d-flex justify-content-between align-items-baseline">
+        <h4 class="heading">Edit Email</h4>
+        <img
+          src="./../assets/images/close.png"
+          @click="hideModal"
+          class="close-icon"
+        />
+      </div>
+      <p class="hint border-bottom pb-2">
+        You will receive verification code on this email
+      </p>
+
+      <div class="mt-4">
+        <label class="label">Email adrress </label>
+        <input-field></input-field>
+        <button class="action-button w-100 mt-3">Save</button>
+      </div>
+    </modal>
   </section>
 </template>
 
 <script>
+import Vue from "vue";
 import HorizontalStepper from "./../components/HorizontalStepper/HorizontalStepper.vue";
 import BasicInfo from "./../components/BasicInfo/BasicInfo";
 import ImportCv from "./../components/ImportCv/ImportCv.vue";
 import ConfirmationAlert from "./../components/ConfirmationAlert/ConfirmationAlert.vue";
+import VModal from "vue-js-modal";
+import InputField from "./../components/InputField.vue";
+Vue.use(VModal);
 
 export default {
   components: {
@@ -53,6 +78,7 @@ export default {
     BasicInfo,
     ImportCv,
     ConfirmationAlert,
+    InputField,
   },
   data() {
     return {
@@ -70,18 +96,25 @@ export default {
       },
     };
   },
-  methods: {},
+  methods: {
+    hideModal() {
+      this.$modal.hide("edit-email");
+    },
+  },
 };
 </script>
 
 /*************************************** section bg ***************************/
 <style lang="scss" scoped>
-.bg {
-  background-image: url("./../assets/images/bg.png");
-  min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+.heading {
+  color: #422e87;
+  font-family: "PoppinsSemiBold";
 }
+.hint {
+  color: #292929;
+  font-size: 13px;
+}
+
 nav {
   padding: 1.9rem 0px;
   .sign-out-btn {
@@ -93,12 +126,6 @@ nav {
     img {
       height: 17px;
     }
-  }
-}
-/* ************************************ media queries ****************************** */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1120px;
   }
 }
 </style>
