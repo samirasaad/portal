@@ -22,14 +22,16 @@
       background-color: #f6f6f6;
       border: 1px solid #422e87;
       color: #422e87;
-      width: 16rem;
+      // width: 16.2rem;
       border-radius: 12px;
+      cursor: pointer;
     }
     .no-option {
       color: #d9d9d9;
       border: 1px solid #d9d9d9;
-      width: 16rem;
+      // width: 16.2rem;
       border-radius: 12px;
+      cursor: pointer;
     }
   }
   .time-line-active-circle,
@@ -185,13 +187,35 @@
   }
 }
 /******************************************** media queries ******************************/
-@media screen and (max-width: 768px) {
+
+@media screen and (min-width: 280px) {
   .available-for-part-time {
     .yes-option {
-      width: 12.8rem !important;
+      width: 10rem;
     }
     .no-option {
-      width: 12.8rem !important;
+      width: 10rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .available-for-part-time {
+    .yes-option {
+      width: 12.99rem;
+    }
+    .no-option {
+      width: 12.99rem;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .available-for-part-time {
+    .yes-option {
+      width: 16.2rem;
+    }
+    .no-option {
+      width: 16.2rem;
     }
   }
 }

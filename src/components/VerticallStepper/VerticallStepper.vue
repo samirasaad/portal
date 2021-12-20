@@ -219,12 +219,12 @@
             <div class="time-line-small-divider"></div>
           </div>
           <div class="step-header-content mx-4 w-100" @click="slideTo(5)">
-            <div class="mb-2 mt-4 mt-md-0">
+            <div class="mb-2 mt-5 mt-md-0">
               <label class="question">{{ options.headers[5].title }}</label>
             </div>
             <div class="d-flex available-for-part-time">
               <div class="yes-option p-3 text-center">Yes</div>
-              <div class="no-option p-3 mx-md-4 mx-2  text-center">
+              <div class="no-option p-3 ml-4 text-center">
                 No
               </div>
             </div>
@@ -258,13 +258,15 @@
             </div>
             <div class="time-line-divider"></div>
             <div class="time-line-small-divider"></div>
+            <div class="time-line-divider d-md-none d-block"></div>
+            <div class="time-line-small-divider d-md-none d-block"></div>
           </div>
           <div class="step-header-content mx-4 w-100" @click="slideTo(6)">
-            <div class="mb-2 mt-4 mt-md-0">
+            <div class="mb-2 mt-5 mt-md-0">
               <label class="question">{{ options.headers[6].title }}</label>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 mb-md-0 mb-3">
                 <input-field></input-field>
               </div>
               <div class="col-md-6">
@@ -301,13 +303,15 @@
             </div>
             <div class="time-line-divider"></div>
             <div class="time-line-small-divider"></div>
+            <div class="time-line-divider d-md-none d-block"></div>
+            <div class="time-line-small-divider d-md-none d-block"></div>
           </div>
           <div class="step-header-content mx-4 w-100" @click="slideTo(7)">
-                <div class="mb-2 mt-4 mt-md-0">
-                  <label class="question">{{ options.headers[6].title }}</label>
-                </div>
+            <div class="mb-2 mt-5 mt-md-0">
+              <label class="question">{{ options.headers[7].title }}</label>
+            </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 mb-md-0 mb-3">
                 <input-field></input-field>
               </div>
               <div class="col-md-6">
