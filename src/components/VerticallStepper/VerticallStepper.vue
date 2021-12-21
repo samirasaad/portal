@@ -181,7 +181,7 @@
             <div class="expected-salary position-relative ">
               <div class="position-absolute">
                 <img
-                  src="./../../assets/images/wrong.png"
+                  src="./../../assets/images/dollar.png"
                   class="mx-3 ml-md-4 ml-0 mt-2"
                 />
               </div>

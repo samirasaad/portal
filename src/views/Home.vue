@@ -2,7 +2,7 @@
   <section class="bg">
     <ConfirmationAlert></ConfirmationAlert>
     <nav class="container d-flex justify-content-between align-items-center">
-      <img src="./../assets/images/logo.png" class="logo mx-4 mx-md-0" />
+      <img src="./../assets/images/logo.svg" class="logo mx-4 mx-md-0" />
       <button class="sign-out-btn mx-md-2 mx-4 px-3">
         <img src="./../assets/images/sign-out.png" class="mr-2" />
         <span class="d-md-inline-block  d-none">Sign out</span>

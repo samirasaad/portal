@@ -3,7 +3,7 @@
     class="confiramation-alert py-2 d-flex justify-content-center align-items-center"
   >
     <div
-      class="d-lg-flex d-block container justify-content-between align-items-baseline"
+      class="d-lg-flex px-0 d-block container justify-content-between align-items-baseline"
     >
       <p class="medium-font mb-0 text-center">
         Please check your email account “saraeldriny@gmail.com” i for the
