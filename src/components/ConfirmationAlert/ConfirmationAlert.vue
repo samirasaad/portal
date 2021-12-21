@@ -24,7 +24,7 @@
 import Vue from "vue";
 import "dtoaster/dist/dtoaster.css";
 import DToaster from "dtoaster";
-
+// toaster
 Vue.use(DToaster, {
   name: "success",
   icon: "mdi mdi-checkbox-multiple-marked-circle-outline",
@@ -37,6 +37,11 @@ Vue.use(DToaster, {
   progress_thumb_bg: "transparent",
   containerOffset: "45px", //toasts container offset from top/bottom of the screen
 });
+
+// modal
+import { Modal, VoerroModal } from "@voerro/vue-modal";
+Vue.component("modal", Modal);
+window.VoerroModal = VoerroModal;
 
 export default {
   components: {},
@@ -51,7 +56,7 @@ export default {
       });
     },
     showModal() {
-      this.$modal.show("edit-email");
+      VoerroModal.show("edit-email");
     },
   },
 };

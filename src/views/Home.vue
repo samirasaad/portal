@@ -1,5 +1,5 @@
 <template>
-  <section class="bg">
+  <section class="bg home-wrapper">
     <ConfirmationAlert></ConfirmationAlert>
     <nav class="container d-flex justify-content-between align-items-center">
       <img src="./../assets/images/logo.svg" class="logo mx-4 mx-md-0" />
@@ -40,23 +40,28 @@
     </div>
 
     <!-- modal -->
-    <modal name="edit-email">
-      <div class="d-flex justify-content-between align-items-baseline">
-        <h4 class="heading">Edit Email</h4>
-        <img
-          src="./../assets/images/close.png"
-          @click="hideModal"
-          class="close-icon"
-        />
-      </div>
-      <p class="hint border-bottom pb-2">
-        You will receive verification code on this email
-      </p>
+    <modal id="edit-email" v-cloak>
+      <template slot="title">
+        <h4 class="heading mb-1">Edit Email</h4>
+        <p class="hint mb-2 pb-1">
+          You will receive verification code on this email
+        </p>
+      </template>
 
-      <div class="mt-4">
-        <label class="label">Email adrress </label>
-        <input-field></input-field>
-        <button class="action-button w-100 mt-3">Save</button>
+      <div slot="body">
+        <div class="mt-4">
+          <label class="label mx-1">Email adrress </label>
+          <input-field></input-field>
+          <button class="action-button w-100 mt-3">Save</button>
+        </div>
+      </div>
+    </modal>
+
+    <modal id="inline-modal-two" v-cloak>
+      <template slot="title">Inline 2</template>
+
+      <div slot="body">
+        This is a different inline modal with a different id.
       </div>
     </modal>
   </section>
@@ -68,9 +73,10 @@ import HorizontalStepper from "./../components/HorizontalStepper/HorizontalStepp
 import BasicInfo from "./../components/BasicInfo/BasicInfo";
 import ImportCv from "./../components/ImportCv/ImportCv.vue";
 import ConfirmationAlert from "./../components/ConfirmationAlert/ConfirmationAlert.vue";
-import VModal from "vue-js-modal";
 import InputField from "./../components/InputField.vue";
-Vue.use(VModal);
+import { Modal, VoerroModal } from "@voerro/vue-modal";
+Vue.component("modal", Modal);
+window.VoerroModal = VoerroModal;
 
 export default {
   components: {
@@ -97,8 +103,8 @@ export default {
     };
   },
   methods: {
-    hideModal() {
-      this.$modal.hide("edit-email");
+    onClose() {
+      VoerroModal.hide("edit-email");
     },
   },
 };
@@ -106,25 +112,28 @@ export default {
 
 /*************************************** section bg ***************************/
 <style lang="scss" scoped>
-.heading {
-  color: #422e87;
-  font-family: "PoppinsSemiBold";
-}
-.hint {
-  color: #292929;
-  font-size: 13px;
-}
+.home-wrapper {
+  .heading {
+    color: #422e87;
+    font-family: "PoppinsSemiBold";
+  }
+  .hint {
+    color: #292929;
+    font-size: 13px;
+    font-weight: 200;
+  }
 
-nav {
-  padding: 1.9rem 0px;
-  .sign-out-btn {
-    color: white;
-    border: 1px solid #aba2c9;
-    border-radius: 10px;
-    background-color: transparent;
-    height: 3.4rem;
-    img {
-      height: 17px;
+  nav {
+    padding: 1.9rem 0px;
+    .sign-out-btn {
+      color: white;
+      border: 1px solid #aba2c9;
+      border-radius: 10px;
+      background-color: transparent;
+      height: 3.4rem;
+      img {
+        height: 17px;
+      }
     }
   }
 }

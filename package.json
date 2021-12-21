@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@mui/material": "^5.2.3",
+    "@voerro/vue-modal": "^1.4.0",
     "axios": "0.19.2",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "bootstrap": "4.4.1",
@@ -26,6 +27,7 @@
     "vue-stepper": "^1.4.2",
     "vue-stepper-improved": "^1.5.0",
     "vue-stepper-sh": "^1.6.0",
+    "vue2-simplert-plugin": "^0.6.0-beta.2",
     "vuejs-stepper": "^0.2.4",
     "vuex": "3.1.3"
   },
