@@ -59,7 +59,7 @@
       </transition-group>
       <!-- stepper actions-->
       <div
-        class="foot mt-5 my-4 flex-md-row "
+        class="foot mt-5 my-4 flex-md-row px-md-2 px-3"
         :class="{
           'justify-content-end': currentPosition == 0,
           'justify-content-between': currentPosition != 0,

@@ -10,8 +10,8 @@
   }
   .expected-salary div {
     right: 8px;
-    top: 0.67rem;
-    height: 31px;
+    top: 0.68rem;
+    height: 36px;
     border-left: 1px solid lightgrey;
     input {
       padding-right: 4rem;
@@ -27,9 +27,8 @@
       cursor: pointer;
     }
     .no-option {
-      color: #d9d9d9;
+      color: #878484;
       border: 1px solid #d9d9d9;
-      // width: 16.2rem;
       border-radius: 12px;
       cursor: pointer;
     }
@@ -114,6 +113,7 @@
     outline: 0;
     border-radius: 12px;
     padding: 1.2rem 3.2em;
+    font-size: 0.99rem;
   }
   .prev-button {
     padding: 7px 15px;

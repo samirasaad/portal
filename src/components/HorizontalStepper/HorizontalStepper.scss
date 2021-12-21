@@ -192,7 +192,7 @@
       display: inline-flex;
       height: 1px;
       background-color: #f1f1f1;
-      width: 7.4rem;
+      width: 7.2rem;
     }
     .time-line-wrapper,
     .title {
@@ -210,7 +210,7 @@
 
   @media screen and (max-width: 520px) {
     .step-header-line {
-      width: 4rem;
+      width: 4.4rem;
     }
   }
 
@@ -220,9 +220,9 @@
     }
   }
 
-  @media screen and (max-width: 411px) {
+  @media screen and (max-width: 410px) {
     .step-header-line {
-      width: 3.4rem;
+      width: 2.8rem;
     }
   }
 
@@ -237,16 +237,15 @@
       width: 1.4rem;
     }
   }
-
   @media screen and (max-width: 1200px) {
     .time-line-divider {
-      width: 4.8rem;
+      width: 4.9rem;
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1000px) {
     .time-line-divider {
-      width: 4.89rem;
+      width: 4.2rem;
     }
   }
 }

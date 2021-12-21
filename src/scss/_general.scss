@@ -137,6 +137,12 @@ button {
     margin: 0;
   }
   .close-modal {
+    &:hover {
+      background-color: transparent;
+    }
+    &:hover > svg {
+      fill: #000;
+    }
     & > svg {
       height: 1.9999rem;
       width: 2rem;
