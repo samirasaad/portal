@@ -4,14 +4,15 @@
   align-items: center;
   .steps-wrapper {
     border-radius: 23px;
+    width: 83%;
   }
   .headers {
-    overflow-x: auto;
+    overflow: visible;
   }
   .expected-salary div {
     right: 8px;
     top: 0.68rem;
-    height: 36px;
+    height: 34px;
     border-left: 1px solid lightgrey;
     input {
       padding-right: 4rem;
@@ -68,6 +69,20 @@
     width: 1.3rem;
   }
 
+  .step-header {
+    border-left: 1px solid #f1f1f1;
+    position: relative;
+    &:first-child {
+      padding-top: 2.4rem;
+    }
+  }
+
+  .time-line-wrapper {
+    position: absolute;
+    left: -1.6rem;
+    top: 0;
+  }
+
   .step-header.start > .header-indicator {
     align-self: flex-end;
   }
@@ -75,8 +90,16 @@
   .step-header-content {
     border-radius: 50%;
     align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  .step-header-wrapper {
+    width: 95%;
+    margin-left: auto;
+    padding-top: 7px;
+  }
   .step-header.active .step-header-line {
     background-color: #ffc628;
   }
@@ -90,7 +113,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 87%;
+    width: 81%;
     margin-left: auto;
     margin-right: auto;
     flex-shrink: 0;
@@ -191,10 +214,21 @@
 @media screen and (min-width: 280px) {
   .available-for-part-time {
     .yes-option {
-      width: 10rem;
+      width: 13rem;
     }
     .no-option {
-      width: 10rem;
+      width: 13rem;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .available-for-part-time {
+    .yes-option {
+      width: 14.5rem;
+    }
+    .no-option {
+      width: 14.5rem;
     }
   }
 }
@@ -209,6 +243,13 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .vertical-stepper .step-header-wrapper {
+    padding-top: 7px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .available-for-part-time {
     .yes-option {
