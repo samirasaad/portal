@@ -24,7 +24,7 @@
           </div>
           <!-- step title-->
           <div
-            class="title my-2 py-2 semibold-font justify-content-center"
+            class="title py-2 semibold-font justify-content-center"
             :class="{ title: true }"
           >
             {{ item.title }}
@@ -101,12 +101,14 @@ export default {
       if (this.currentPosition < this.options.headers.length - 1) {
         this.transitionType = "stepper-slide-1";
         this.currentPosition++;
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
       }
     },
     prev() {
       if (this.currentPosition > 0) {
         this.transitionType = "stepper-slide-2";
         this.currentPosition--;
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
       }
     },
     slideTo(index) {

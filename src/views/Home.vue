@@ -7,7 +7,7 @@
         <span class="d-md-inline-block  d-none">Sign out</span>
       </button>
     </nav>
-    <div class="parent my-4 d-flex justify-content-center align-items-center">
+    <div class="parent py-4 d-flex justify-content-center align-items-center">
       <HorizontalStepper
         :options="stepperOptions"
         class="container px-3 px-md-0"
