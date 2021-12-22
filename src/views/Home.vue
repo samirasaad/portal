@@ -38,7 +38,7 @@
       </HorizontalStepper>
     </div>
 
-    <!-- modal -->
+    <!-- edit email modal -->
     <modal id="edit-email" v-cloak>
       <template slot="title">
         <h4 class="heading mb-1">Edit Email</h4>
@@ -53,14 +53,6 @@
           <input-field></input-field>
           <button class="action-button w-100 mt-3">Save</button>
         </div>
-      </div>
-    </modal>
-
-    <modal id="inline-modal-two" v-cloak>
-      <template slot="title">Inline 2</template>
-
-      <div slot="body">
-        This is a different inline modal with a different id.
       </div>
     </modal>
   </section>

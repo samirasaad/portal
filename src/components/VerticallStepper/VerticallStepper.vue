@@ -1,9 +1,9 @@
 <template>
   <div class="vertical-stepper">
     <div class=" steps-wrapper">
-      <!-- headers-->
       <div class="headers px-0  justify-content-md-center">
         <div class="d-flex align-items-end step-header pb-4"></div>
+        <!-- 1st question -->
         <div
           class="d-flex align-items-end pb-4"
           :class="{
@@ -33,12 +33,10 @@
               <div class="mb-2 mt-md-4 mt-0 mt-md-0 px-3 px-md-0">
                 <label class="question">{{ options.headers[0].title }}</label>
               </div>
-              <!-- <component :is="options.headers[0].content"></component> -->
               <input-field></input-field>
             </div>
           </div>
         </div>
-
         <!-- 2nd question -->
         <div
           class="d-flex align-items-end pb-4"
@@ -69,11 +67,42 @@
               <div class="mb-2 mt-md-4 mt-0 mt-md-0 px-3 px-md-0">
                 <label class="question">{{ options.headers[1].title }}</label>
               </div>
-              <input-field></input-field>
+              <div
+                class="skills-view-wrapper d-flex flex-wrap  py-2"
+                @click="showModal"
+              >
+                <p class="skill px-2 mx-2 py-2 mb-0">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+                <p class="skill px-2 mx-2 py-2 mb-0">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+                <p class="skill px-2 mx-2 py-2 mb-0">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+                <p class="skill px-2 mx-2 py-2 mb-0">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+              </div>
             </div>
           </div>
         </div>
-
         <!-- 3rd question -->
         <div
           class="d-flex align-items-end pb-4"
@@ -142,7 +171,6 @@
             </div>
           </div>
         </div>
-
         <!-- 5th question -->
         <div
           class="d-flex align-items-end pb-4"
@@ -185,7 +213,6 @@
             </div>
           </div>
         </div>
-
         <!-- 6th question -->
         <div
           class="d-flex align-items-end pb-4"
@@ -225,7 +252,6 @@
             </div>
           </div>
         </div>
-
         <!-- 7th question -->
         <div
           class="d-flex align-items-end pb-4"
@@ -267,7 +293,6 @@
             </div>
           </div>
         </div>
-
         <!-- 8th question -->
         <div
           class="d-flex align-items-end pb-4"
@@ -311,11 +336,34 @@
         </div>
       </div>
     </div>
+    <!-- select skills modal -->
+    <modal id="select-skills" v-cloak>
+      <template slot="title">
+        <h4 class="heading mb-1">Edit Email</h4>
+        <p class="hint mb-2 pb-1">
+          You will receive verification code on this email
+        </p>
+      </template>
+
+      <div slot="body">
+        <div class="mt-4">
+          <label class="label mx-1">Email adrress </label>
+          <input-field></input-field>
+          <button class="action-button w-100 mt-3">Save</button>
+        </div>
+      </div>
+    </modal>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
 import InputField from "../InputField.vue";
+// modal
+import { Modal, VoerroModal } from "@voerro/vue-modal";
+Vue.component("modal", Modal);
+window.VoerroModal = VoerroModal;
+
 export default {
   components: { InputField },
   name: "Stepper",
@@ -347,6 +395,12 @@ export default {
         this.transitionType = "stepper-slide-1";
       }
       this.currentPosition = index;
+    },
+    showModal() {
+      VoerroModal.show("select-skills");
+    },
+    onClose() {
+      VoerroModal.hide("select-skills");
     },
   },
 };

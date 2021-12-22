@@ -29,7 +29,7 @@
           <img src="./../../assets/images/uploading.png" class="px-4 " />
         </div>
         <div v-if="!filelist || !filelist.length">
-          <p class="mb-0 file-name">Upload your C.V</p>
+          <p class="mb-0 upload-ur-cv medium-font">Upload your C.V</p>
           <p class="file-size mt-1 mb-0">Drag and drop files here</p>
         </div>
         <div class="d-flex" v-for="file in filelist" :key="file">
