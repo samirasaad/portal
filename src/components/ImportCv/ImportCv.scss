@@ -1,18 +1,30 @@
 .import-cv-wrapper {
+  width: 83%;
+  margin: auto;
+
+  [type="file"] {
+    width: 3.4rem;
+    height: 3.4rem;
+    position: absolute;
+    padding: 0px;
+  }
   .heading {
     color: #3a3a3a;
   }
   .hint {
     color: #8d8d8d;
   }
-  width: 83%;
-  margin: auto;
   .import-cv-input {
     opacity: 0;
   }
   .upload-wrapper {
+    background-color: #fbfafd;
     border: 2px dashed #dfdcdc;
     border-radius: 12px;
+    min-height: 6rem;
+    .upload-icon {
+      cursor: pointer;
+    }
     .file-name {
       top: 0;
       color: #292929;
@@ -29,5 +41,17 @@
       padding-top: 0.36rem;
       padding-bottom: 0.36rem;
     }
+  }
+  .bg-gray-original {
+    background-color: #fbfafd;
+  }
+  .bg-gray-darker {
+    background-color: #ededed;
+  }
+  .import-wrapper {
+    background-color: #ffffff;
+    border: 1px solid #e2e0e0;
+    border-radius: 12px;
+    min-height: 6rem;
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <section class="bg home-wrapper">
-    <ConfirmationAlert></ConfirmationAlert>
     <nav class="container d-flex justify-content-between align-items-center">
       <img src="./../assets/images/logo.svg" class="logo mx-4 mx-md-0" />
       <button class="sign-out-btn mx-md-2 mx-4 px-3">
@@ -8,7 +7,7 @@
         <span class="d-md-inline-block  d-none">Sign out</span>
       </button>
     </nav>
-    <div class="parent pb-4">
+    <div class="parent my-4 d-flex justify-content-center align-items-center">
       <HorizontalStepper
         :options="stepperOptions"
         class="container px-3 px-md-0"
@@ -124,7 +123,7 @@ export default {
   }
 
   nav {
-    padding: 1.9rem 0px;
+    padding-top: 1.9rem;
     .sign-out-btn {
       color: white;
       border: 1px solid #aba2c9;
@@ -136,5 +135,8 @@ export default {
       }
     }
   }
+  // .parent {
+  //   height: calc(100vh - (84px));
+  // }
 }
 </style>
