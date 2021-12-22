@@ -75,6 +75,9 @@
     &:first-child {
       padding-top: 2.4rem;
     }
+    &:last-child {
+      border-left: 0;
+    }
   }
 
   .time-line-wrapper {
