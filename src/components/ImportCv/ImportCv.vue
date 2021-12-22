@@ -59,8 +59,11 @@
     >
       <div class="d-flex justify-content-center align-items-center">
         <div class="d-flex justify-content-center align-items-center">
-          <img src="./../../assets/images/linkedin.png" class="px-4 " />
-          <p>Import from LinkedIn</p>
+          <img
+            src="./../../assets/images/linkedin.png"
+            class="linkedin-icon px-4"
+          />
+          <p class="mb-0">Import from LinkedIn</p>
         </div>
       </div>
       <img src="./../../assets/images/success.png" class="mr-4 ml-md-0 ml-3" />
