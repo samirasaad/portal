@@ -28,6 +28,10 @@
         <div class="d-flex justify-content-center align-items-center">
           <img src="./../../assets/images/uploading.png" class="px-4 " />
         </div>
+        <div v-if="!filelist || !filelist.length">
+          <p class="mb-0 file-name">Upload your C.V</p>
+          <p class="file-size mt-1 mb-0">Drag and drop files here</p>
+        </div>
         <div class="d-flex" v-for="file in filelist" :key="file">
           <div>
             <p class="mb-0 file-name">
@@ -49,7 +53,7 @@
         src="./../../assets/images/success.png"
         v-for="file in filelist"
         :key="file"
-        class="mr-4 ml-md-0 ml-3"
+        class="mr-4  ml-3"
       />
     </div>
 
@@ -66,7 +70,7 @@
           <p class="mb-0">Import from LinkedIn</p>
         </div>
       </div>
-      <img src="./../../assets/images/success.png" class="mr-4 ml-md-0 ml-3" />
+      <img src="./../../assets/images/success.png" class="mr-4  ml-3" />
     </div>
   </section>
 </template>
