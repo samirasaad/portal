@@ -1,5 +1,7 @@
 <template>
   <section class="bg home-wrapper">
+    <!-- alert -->
+    <confirmation-alert></confirmation-alert>
     <nav class="container d-flex justify-content-between align-items-center">
       <img src="./../assets/images/logo.svg" class="logo mx-4 mx-md-0" />
       <button class="sign-out-btn mx-md-2 mx-4 px-3">
@@ -39,22 +41,24 @@
     </div>
 
     <!-- edit email modal -->
-    <modal id="edit-email" v-cloak>
-      <template slot="title">
-        <h4 class="heading mb-1">Edit Email</h4>
-        <p class="hint mb-2 pb-1">
-          You will receive verification code on this email
-        </p>
-      </template>
+    <section class="edit-email">
+      <modal id="edit-email" v-cloak>
+        <template slot="title">
+          <h4 class="heading mb-1">Edit Email</h4>
+          <p class="hint mb-2 pb-1">
+            You will receive verification code on this email
+          </p>
+        </template>
 
-      <div slot="body">
-        <div class="mt-4">
-          <label class="label mx-1">Email adrress </label>
-          <input-field></input-field>
-          <button class="action-button w-100 mt-3">Save</button>
+        <div slot="body">
+          <div class="mt-4">
+            <label class="label mx-1">Email adrress </label>
+            <input-field></input-field>
+            <button class="action-button w-100 mt-3">Save</button>
+          </div>
         </div>
-      </div>
-    </modal>
+      </modal>
+    </section>
   </section>
 </template>
 
@@ -104,16 +108,6 @@ export default {
 /*************************************** section bg ***************************/
 <style lang="scss" scoped>
 .home-wrapper {
-  .heading {
-    color: #422e87;
-    font-family: "PoppinsSemiBold";
-  }
-  .hint {
-    color: #292929;
-    font-size: 13px;
-    font-weight: 200;
-  }
-
   nav {
     padding-top: 1.9rem;
     .sign-out-btn {
@@ -125,6 +119,17 @@ export default {
       img {
         height: 17px;
       }
+    }
+  }
+  .edit-email {
+    .heading {
+      color: #422e87;
+      font-family: "PoppinsSemiBold";
+    }
+    .hint {
+      color: #292929;
+      font-size: 13px;
+      font-weight: 200;
     }
   }
   // .parent {

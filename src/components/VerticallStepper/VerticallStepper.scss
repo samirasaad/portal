@@ -19,19 +19,17 @@
     }
   }
   .available-for-part-time {
-    .yes-option {
-      background-color: #f6f6f6;
-      border: 1px solid #422e87;
-      color: #422e87;
-      // width: 16.2rem;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-    .no-option {
+    .availability-option {
       color: #878484;
       border: 1px solid #d9d9d9;
       border-radius: 12px;
       cursor: pointer;
+    }
+    .selected-availbility-option {
+      background-color: #f6f6f6;
+      border: 1px solid #422e87;
+      color: #422e87;
+      border-radius: 12px;
     }
   }
   .time-line-active-circle,
@@ -178,6 +176,19 @@
     }
   }
 
+  .select-skills {
+    .heading {
+      color: #292929;
+      font-weight: 600;
+    }
+    .modal-header {
+      border-top: 0;
+    }
+    .skills-wrapper {
+      border: 1px solid #d5cfcf;
+      border-radius: 6px;
+    }
+  }
   .stepper-slide-1-enter-active {
     animation: slide-in 0.3s;
   }
@@ -228,10 +239,8 @@
 
 @media screen and (min-width: 280px) {
   .available-for-part-time {
-    .yes-option {
-      width: 13rem;
-    }
-    .no-option {
+    .selected-availbility-option,
+    .availability-option {
       width: 13rem;
     }
   }
@@ -239,10 +248,8 @@
 
 @media screen and (max-width: 440px) {
   .available-for-part-time {
-    .yes-option {
-      width: 14.5rem;
-    }
-    .no-option {
+    .selected-availbility-option,
+    .availability-option {
       width: 14.5rem;
     }
   }
@@ -250,10 +257,8 @@
 
 @media screen and (min-width: 768px) {
   .available-for-part-time {
-    .yes-option {
-      width: 12.99rem;
-    }
-    .no-option {
+    .selected-availbility-option,
+    .availability-option {
       width: 12.99rem;
     }
   }
@@ -267,10 +272,8 @@
 
 @media screen and (min-width: 1024px) {
   .available-for-part-time {
-    .yes-option {
-      width: 16.2rem;
-    }
-    .no-option {
+    .selected-availbility-option,
+    .availability-option {
       width: 16.2rem;
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <div class="vertical-stepper">
-    <div class=" steps-wrapper">
-      <div class="headers px-0  justify-content-md-center">
+    <div class="steps-wrapper">
+      <div class="headers px-0 justify-content-md-center">
         <div class="d-flex align-items-end step-header pb-4"></div>
         <!-- 1st question -->
         <div
@@ -14,10 +14,16 @@
         >
           <!-- time line-->
           <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              time-line-wrapper
+            "
           >
             <div
-              class="d-flex justify-content-center align-items-center "
+              class="d-flex justify-content-center align-items-center"
               :class="{
                 'time-line-active-circle': currentPosition === 0,
                 'time-line-dimmed-circle': currentPosition !== 0,
@@ -28,7 +34,7 @@
               </span>
             </div>
           </div>
-          <div class="step-header-content " @click="slideTo(0)">
+          <div class="step-header-content" @click="slideTo(0)">
             <div class="step-header-wrapper">
               <div class="mb-2 mt-md-4 mt-0 mt-md-0 px-3 px-md-0">
                 <label class="question">{{ options.headers[0].title }}</label>
@@ -48,10 +54,16 @@
         >
           <!-- time line-->
           <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              time-line-wrapper
+            "
           >
             <div
-              class="d-flex justify-content-center align-items-center "
+              class="d-flex justify-content-center align-items-center"
               :class="{
                 'time-line-active-circle': currentPosition === 1,
                 'time-line-dimmed-circle': currentPosition !== 1,
@@ -62,37 +74,37 @@
               </span>
             </div>
           </div>
-          <div class="step-header-content " @click="slideTo(1)">
+          <div class="step-header-content" @click="slideTo(1)">
             <div class="step-header-wrapper">
               <div class="mb-2 mt-md-4 mt-0 mt-md-0 px-3 px-md-0">
                 <label class="question">{{ options.headers[1].title }}</label>
               </div>
               <div
-                class="skills-view-wrapper d-flex flex-wrap  py-2"
+                class="skills-view-wrapper d-flex flex-wrap py-2"
                 @click="showModal"
               >
-                <p class="skill px-2 mx-2 py-2 mb-0">
+                <p class="skill px-2 mx-2 py-2 mb-md-0 mb-2">
                   UI Design
                   <img
                     src="./../../assets/images/remove-skill.png"
                     class="remove-skill"
                   />
                 </p>
-                <p class="skill px-2 mx-2 py-2 mb-0">
+                <p class="skill px-2 mx-2 py-2 mb-md-0 mb-2">
                   UI Design
                   <img
                     src="./../../assets/images/remove-skill.png"
                     class="remove-skill"
                   />
                 </p>
-                <p class="skill px-2 mx-2 py-2 mb-0">
+                <p class="skill px-2 mx-2 py-2 mb-md-0 mb-2">
                   UI Design
                   <img
                     src="./../../assets/images/remove-skill.png"
                     class="remove-skill"
                   />
                 </p>
-                <p class="skill px-2 mx-2 py-2 mb-0">
+                <p class="skill px-2 mx-2 py-2 mb-md-0 mb-2">
                   UI Design
                   <img
                     src="./../../assets/images/remove-skill.png"
@@ -114,10 +126,16 @@
         >
           <!-- time line-->
           <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              time-line-wrapper
+            "
           >
             <div
-              class="d-flex justify-content-center align-items-center "
+              class="d-flex justify-content-center align-items-center"
               :class="{
                 'time-line-active-circle': currentPosition === 2,
                 'time-line-dimmed-circle': currentPosition !== 2,
@@ -128,7 +146,7 @@
               </span>
             </div>
           </div>
-          <div class="step-header-content " @click="slideTo(2)">
+          <div class="step-header-content" @click="slideTo(2)">
             <div class="step-header-wrapper">
               <div class="mb-2 mt-md-4 mt-0 mt-md-0 px-3 px-md-0">
                 <label class="question">{{ options.headers[2].title }}</label>
@@ -148,10 +166,16 @@
         >
           <!-- time line-->
           <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              time-line-wrapper
+            "
           >
             <div
-              class="d-flex justify-content-center align-items-center "
+              class="d-flex justify-content-center align-items-center"
               :class="{
                 'time-line-active-circle': currentPosition === 3,
                 'time-line-dimmed-circle': currentPosition !== 3,
@@ -162,7 +186,7 @@
               </span>
             </div>
           </div>
-          <div class="step-header-content " @click="slideTo(3)">
+          <div class="step-header-content" @click="slideTo(3)">
             <div class="step-header-wrapper">
               <div class="mb-2 mt-md-4 mt-0 mt-md-0 px-3 px-md-0">
                 <label class="question">{{ options.headers[3].title }}</label>
@@ -182,10 +206,16 @@
         >
           <!-- time line-->
           <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              time-line-wrapper
+            "
           >
             <div
-              class="d-flex justify-content-center align-items-center "
+              class="d-flex justify-content-center align-items-center"
               :class="{
                 'time-line-active-circle': currentPosition === 4,
                 'time-line-dimmed-circle': currentPosition !== 4,
@@ -196,12 +226,12 @@
               </span>
             </div>
           </div>
-          <div class="step-header-content " @click="slideTo(4)">
+          <div class="step-header-content" @click="slideTo(4)">
             <div class="step-header-wrapper">
               <div class="mb-2 mt-md-4 mt-0 mt-md-0 px-3 px-md-0">
                 <label class="question">{{ options.headers[4].title }}</label>
               </div>
-              <div class="expected-salary position-relative ">
+              <div class="expected-salary position-relative">
                 <div class="position-absolute">
                   <img
                     src="./../../assets/images/dollar.png"
@@ -224,10 +254,16 @@
         >
           <!-- time line-->
           <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              time-line-wrapper
+            "
           >
             <div
-              class="d-flex justify-content-center align-items-center "
+              class="d-flex justify-content-center align-items-center"
               :class="{
                 'time-line-active-circle': currentPosition === 5,
                 'time-line-dimmed-circle': currentPosition !== 5,
@@ -238,16 +274,23 @@
               </span>
             </div>
           </div>
-          <div class="step-header-content " @click="slideTo(5)">
+          <div class="step-header-content" @click="slideTo(5)">
             <div class="step-header-wrapper">
               <div class="mb-2 mt-md-4 mt-0 mt-md-0 px-3 px-md-0">
                 <label class="question">{{ options.headers[5].title }}</label>
               </div>
               <div class="d-flex available-for-part-time">
-                <div class="yes-option p-3 text-center">Yes</div>
-                <div class="no-option p-3 ml-4 text-center">
-                  No
+                <div
+                  class="
+                    availability-option
+                    selected-availbility-option
+                    p-3
+                    text-center
+                  "
+                >
+                  Yes
                 </div>
+                <div class="availability-option p-3 ml-4 text-center">No</div>
               </div>
             </div>
           </div>
@@ -263,10 +306,16 @@
         >
           <!-- time line-->
           <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              time-line-wrapper
+            "
           >
             <div
-              class="d-flex justify-content-center align-items-center "
+              class="d-flex justify-content-center align-items-center"
               :class="{
                 'time-line-active-circle': currentPosition === 6,
                 'time-line-dimmed-circle': currentPosition !== 6,
@@ -304,10 +353,16 @@
         >
           <!-- time line-->
           <div
-            class="d-flex flex-column justify-content-center align-items-center time-line-wrapper"
+            class="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              time-line-wrapper
+            "
           >
             <div
-              class="d-flex justify-content-center align-items-center "
+              class="d-flex justify-content-center align-items-center"
               :class="{
                 'time-line-active-circle': currentPosition === 7,
                 'time-line-dimmed-circle': currentPosition !== 7,
@@ -337,22 +392,21 @@
       </div>
     </div>
     <!-- select skills modal -->
-    <modal id="select-skills" v-cloak>
-      <template slot="title">
-        <h4 class="heading mb-1">Edit Email</h4>
-        <p class="hint mb-2 pb-1">
-          You will receive verification code on this email
-        </p>
-      </template>
+    <section class="select-skills">
+      <modal id="select-skills" v-cloak>
+        <template slot="title">
+          <h4 class="heading mb-1 semiBold-font">Select project types</h4>
+        </template>
 
-      <div slot="body">
-        <div class="mt-4">
-          <label class="label mx-1">Email adrress </label>
-          <input-field></input-field>
-          <button class="action-button w-100 mt-3">Save</button>
+        <div slot="body">
+          <div class="mt-4 skills-wrapper">
+            <label class="label mx-1">Email adrress </label>
+            <input-field></input-field>
+            <button class="action-button w-100 mt-3">Save</button>
+          </div>
         </div>
-      </div>
-    </modal>
+      </modal>
+    </section>
   </div>
 </template>
 
