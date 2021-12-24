@@ -75,6 +75,26 @@ input {
   font-family: "PoppinsSemiBold";
   font-size: 1.1rem;
 }
+.modal-cancel-btn {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: black;
+  outline: 0;
+  border-radius: 12px;
+  font-family: "PoppinsSemiBold";
+  padding: 0.8rem 2.8em;
+  font-size: 1.1rem;
+}
+.modal-save-btn {
+  background-color: #ffc629;
+  border: 1px solid #ffc629;
+  color: black;
+  outline: 0;
+  border-radius: 12px;
+  padding: 0.8rem 2.8em;
+  font-family: "PoppinsSemiBold";
+  font-size: 1.1rem;
+}
 .sign-out-btn {
   color: white;
   border: 1px solid #aba2c9;
@@ -128,6 +148,7 @@ button {
   padding: 2.2rem;
   .modal-header {
     padding: 0;
+    border-bottom: 0;
   }
   .modal-body {
     padding: 0;
@@ -151,16 +172,49 @@ button {
   }
 }
 
+/***************************************** checkbox ******************************************/
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.6em;
+  height: 1.6em;
+  border: 0.15em solid #d9d9d9;
+  border-radius: 0.35em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked {
+  border: 0.15em solid #422e87;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #422e87;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(0.98);
+}
+
 /* ************************************ media queries ****************************** */
 @media (min-width: 1400px) {
   .container {
     max-width: 1120px;
   }
 }
-@media screen and (min-width: 1024px) {
-  .home-wrapper {
-    .modal-box {
-      min-width: 40% !important;
-    }
+
+@media only screen and (min-width: 1024px) {
+  .modal-box {
+    max-width: 50% !important;
   }
 }

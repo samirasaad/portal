@@ -395,14 +395,154 @@
     <section class="select-skills">
       <modal id="select-skills" v-cloak>
         <template slot="title">
-          <h4 class="heading mb-1 semiBold-font">Select project types</h4>
+          <h4 class="heading mb-0 semiBold-font">Select project types</h4>
         </template>
 
         <div slot="body">
-          <div class="mt-4 skills-wrapper">
-            <label class="label mx-1">Email adrress </label>
-            <input-field></input-field>
-            <button class="action-button w-100 mt-3">Save</button>
+          <div class="mt-2 mx-0 row skills-wrapper py-4">
+            <div class="col-lg-6 skills-tobe-selected">
+              <div class="skills-search position-relative">
+                <input class="w-100" placeholder="Search" />
+                <img
+                  src="./../../assets/images/ic_search.png"
+                  class="position-absolute"
+                />
+              </div>
+              <div class="skills-list mb-2 mt-3">
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+                <div class="d-flex align-items-baseline mb-2">
+                  <label class="">
+                    <input type="checkbox" name="checkbox" />
+                  </label>
+                  <p class="mb-0 skill-title mx-2">Accounting</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 px-2 skills-selected ">
+              <div class="d-flex flex-wrap  align-items-baseline py-2">
+                <p class="skill px-2 ml-2 mr-1 py-2  mb-2 mt-1">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+
+                <p class="skill px-2 ml-2 mr-1 py-2 mb-2 mt-1">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+                <p class="skill px-2 ml-2 mr-1 py-2  mb-2 mt-1">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+                <p class="skill px-2 ml-2 mr-1 py-2  mb-2 mt-1">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+                <p class="skill px-2 ml-2 mr-1 py-2  mb-2 mt-1">
+                  UI Design
+                  <img
+                    src="./../../assets/images/remove-skill.png"
+                    class="remove-skill"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mt-3">
+            <button class="modal-cancel-btn  " @click="onClose">Cancel</button>
+            <button class="modal-save-btn ">Save</button>
           </div>
         </div>
       </modal>

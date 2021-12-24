@@ -2,7 +2,9 @@
   <section class="bg home-wrapper">
     <!-- alert -->
     <confirmation-alert></confirmation-alert>
-    <nav class="container d-flex justify-content-between align-items-center">
+    <nav
+      class="container d-flex justify-content-between align-items-center px-0"
+    >
       <img src="./../assets/images/logo.svg" class="logo mx-4 mx-md-0" />
       <button class="sign-out-btn mx-md-2 mx-4 px-3">
         <img src="./../assets/images/sign-out.png" class="mr-2" />
@@ -106,7 +108,7 @@ export default {
 </script>
 
 /*************************************** section bg ***************************/
-<style lang="scss" scoped>
+<style lang="scss">
 .home-wrapper {
   nav {
     padding-top: 1.9rem;
@@ -122,18 +124,34 @@ export default {
     }
   }
   .edit-email {
-    .heading {
-      color: #422e87;
-      font-family: "PoppinsSemiBold";
-    }
-    .hint {
-      color: #292929;
-      font-size: 13px;
-      font-weight: 200;
+    .modal-box {
+      .modal-header {
+        .heading {
+          color: #422e87;
+          font-family: "PoppinsSemiBold";
+        }
+        .hint {
+          color: #292929;
+          font-size: 13px;
+          font-weight: 200;
+        }
+
+        border-bottom: 1px solid #e9e9e9 !important;
+      }
     }
   }
+
   // .parent {
   //   height: calc(100vh - (84px));
   // }
+}
+@media screen and (min-width: 1024px) {
+  .home-wrapper {
+    .edit-email {
+      .modal-box {
+        min-width: 40% !important;
+      }
+    }
+  }
 }
 </style>
